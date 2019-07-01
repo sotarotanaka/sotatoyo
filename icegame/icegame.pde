@@ -18,16 +18,28 @@ int icemode=0;
 abstract class F {
   void drawc() {
     int cx=230+60*(x-1), cy=55+60*(y-1);
-    fill(0, 0, 255);
-    //ellipse(cx, cy, 40, 40);
-    triangle(cx, cy-30, cx-30, cy, cx+30, cy);
-    fill(255, 0, 0);
+    fill(0);
+    triangle(cx+30, cy-35, cx-30, cy-20, cx+15, cy+10);
+    triangle(cx, cy-35, cx-30, cy+7, cx+30, cy);
+  
+    fill(0,0,255);
     triangle(cx, cy, cx-30, cy+30, cx+30, cy+30);
     fill(251, 185, 141);
     triangle(cx, cy+15, cx-20, cy, cx+20, cy);
     fill(0);
     ellipse(cx-7, cy+3, 5, 5);
     ellipse(cx+7, cy+3, 5, 5);
+  
+    fill(255,255,0);
+    rect(cx-20,cy-10,40,10);
+    fill(255,0,0);
+    ellipse(cx,cy-5,10,10);
+  
+    fill(100);
+    ellipse(cx+15,cy+20,25,25);
+    ellipse(cx+15,cy+20,15,15);
+    rect(cx-20,cy-5,5,30);
+    rect(cx-25,cy+15,15,5);
     if (x==10 && y==10) {
       fn++;
       cx=230;
