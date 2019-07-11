@@ -736,14 +736,14 @@ void keyPressed() {
     y=1;
     stroke(0);
   }
-  if (keyCode==LEFT) {
+  if (keyCode==RIGHT) {
     f[fn].movec(2);
-  } else if (keyCode==RIGHT) {
+  } else if (keyCode==LEFT) {
     f[fn].movec(1);
   } 
-  if (keyCode==UP) {
+  if (keyCode==DOWN) {
     f[fn].movec(4);
-  } else if (keyCode==DOWN) {
+  } else if (keyCode==UP) {
     f[fn].movec(3);
   }
 }
