@@ -8,19 +8,19 @@ int [][]f2={{1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1}, {1, 4, 3, 0, 0, 0, 0, 2, 0, 0,
   , {1, 0, 1, 0, 0, 0, 1, 1, 0, 1, 0, 1}, {1, 0, 1, 3, 1, 1, 0, 0, 0, 1, 3, 1}, {1, 0, 1, 0, 0, 0, 0, 1, 3, 1, 0, 1}, 
   {1, 0, 1, 0, 1, 1, 1, 1, 0, 1, 0, 1}, 
   {1, 0, 3, 0, 3, 0, 0, 2, 0, 2, 5, 1}, {1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1}};
-  
+
 int [][]f3={{1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1}, {1, 4, 3, 3, 3, 1, 3, 3, 3, 3, 3, 1}, {1, 1, 1, 1, 3, 3, 3, 3, 1, 3, 3, 1}, 
   {1, 3, 3, 3, 1, 1, 1, 3, 3, 3, 1, 1}, {1, 3, 1, 3, 1, 1, 1, 3, 3, 3, 3, 1}, {1, 3, 1, 3, 1, 1, 1, 3, 3, 1, 3, 1}
   , {1, 3, 3, 3, 3, 3, 2, 1, 3, 3, 3, 1}, {1, 0, 0, 3, 2, 1, 1, 3, 3, 3, 3, 1}, {1, 3, 2, 3, 0, 1, 0, 3, 3, 3, 1, 1}, 
   {1, 3, 1, 1, 0, 0, 0, 3, 2, 3, 3, 1}, 
   {1, 3, 3, 3, 3, 3, 3, 3, 1, 3, 5, 1}, {1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1}};
-  
+
 int [][]f4={{1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1}, {1, 4, 1, 2, 0, 0, 0, 0, 1, 2, 2, 1}, {1, 0, 1, 0, 0, 1, 1, 0, 1, 0, 0, 1}, 
   {1, 0, 1, 0, 1, 0, 0, 0, 1, 0, 0, 1}, {1, 0, 1, 0, 1, 3, 1, 3, 1, 3, 3, 1}, {1, 0, 1, 0, 0, 0, 0, 0, 3, 0, 0, 1}
   , {1, 0, 1, 0, 1, 0, 1, 0, 1, 1, 0, 1}, {1, 0, 1, 3, 1, 2, 1, 3, 1, 1, 0, 1}, {1, 0, 1, 0, 0, 0, 0, 0, 0, 1, 0, 1}, 
   {1, 0, 1, 1, 1, 1, 1, 1, 0, 1, 0, 1}, 
   {1, 0, 3, 0, 0, 0, 0, 0, 0, 1, 5, 1}, {1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1}};
-  
+
 int [][]f5={{1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1}, {1, 4, 0, 0, 3, 0, 0, 0, 0, 0, 0, 1}, {1, 0, 1, 3, 1, 3, 1, 3, 1, 0, 3, 1}, 
   {1, 0, 3, 0, 0, 0, 2, 0, 3, 0, 0, 1}, {1, 0, 1, 3, 1, 3, 1, 3, 1, 2, 0, 1}, {1, 0, 0, 2, 0, 0, 0, 0, 3, 0, 0, 1}
   , {1, 3, 1, 3, 1, 3, 1, 3, 1, 0, 0, 1}, {1, 0, 0, 0, 3, 0, 0, 0, 3, 0, 2, 1}, {1, 3, 1, 0, 1, 3, 1, 3, 1, 1, 1, 1}, 
@@ -30,7 +30,7 @@ int [][]f5={{1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1}, {1, 4, 0, 0, 3, 0, 0, 0, 0, 0,
 int fn=0;
 int x=1, y=1;
 int page=0;
-int ct=0, t=360;
+int ct=0, t=180;
 int di=0;
 int icemode=0;
 
@@ -39,28 +39,28 @@ PImage b;
 abstract class F {
   void drawc() {
     int cx=230+60*(x-1), cy=55+60*(y-1);
-   fill(0);
-   triangle(cx+30, cy-35, cx-30, cy-20, cx+15, cy+10);
-   triangle(cx, cy-35, cx-30, cy+7, cx+30, cy);
-  
-   fill(0,0,255);
-   triangle(cx, cy, cx-30, cy+30, cx+30, cy+30);
-   fill(251, 185, 141);
-   triangle(cx, cy+15, cx-20, cy, cx+20, cy);
-   fill(0);
-   ellipse(cx-7, cy+3, 5, 5);
-   ellipse(cx+7, cy+3, 5, 5);
-  
-   fill(255,255,0);
-   rect(cx-20,cy-10,40,10);
-   fill(255,0,0);
-   ellipse(cx,cy-5,10,10);
-  
-   fill(100);
-   ellipse(cx+15,cy+20,25,25);
-   ellipse(cx+15,cy+20,15,15);
-   rect(cx-20,cy-5,5,30);
-   rect(cx-25,cy+15,15,5);
+    fill(0);
+    triangle(cx+30, cy-35, cx-30, cy-20, cx+15, cy+10);
+    triangle(cx, cy-35, cx-30, cy+7, cx+30, cy);
+
+    fill(0, 0, 255);
+    triangle(cx, cy, cx-30, cy+30, cx+30, cy+30);
+    fill(251, 185, 141);
+    triangle(cx, cy+15, cx-20, cy, cx+20, cy);
+    fill(0);
+    ellipse(cx-7, cy+3, 5, 5);
+    ellipse(cx+7, cy+3, 5, 5);
+
+    fill(255, 255, 0);
+    rect(cx-20, cy-10, 40, 10);
+    fill(255, 0, 0);
+    ellipse(cx, cy-5, 10, 10);
+
+    fill(100);
+    ellipse(cx+15, cy+20, 25, 25);
+    ellipse(cx+15, cy+20, 15, 15);
+    rect(cx-20, cy-5, 5, 30);
+    rect(cx-25, cy+15, 15, 5);
     if (x==10 && y==10) {
       fn++;
       cx=230;
@@ -99,6 +99,7 @@ abstract class F {
   void pitfall() {
     //cx=230;
     //cy=55;
+    fn=1;
     x=1;
     y=1;
   }
@@ -109,7 +110,14 @@ abstract class F {
     fill(255);
     textSize(60);
     text("Y o u  L o s e", 300, height/2);
-    noLoop();
+    if (frameCount / 10 % 2 == 0) { // frameCount % 2 == 0 だと速すぎ
+      fill(0);
+    } else {
+      fill(255);
+    }
+    textSize(60);
+    text("press ENTER to restart", 200, height-30);
+    //noLoop();
   }
 
   abstract void d();
@@ -134,8 +142,9 @@ class s extends F {
     } else {
       fill(255);
     }
+    //fill(0);
     textSize(60);
-    text("press s to start", 275, height/2);
+    text("press ENTER to start", 200, height/2);
     fill(0);
     textSize(40);
     text("time limit : 180sec", 600, height/2+100);
@@ -635,22 +644,33 @@ class g extends F {
     }
 
     if (hy<=50) {
-      if (frameCount / 10 % 2 == 0) { // frameCount % 2 == 0 だと速すぎ
-        fill(255);
-      } else {
-        fill(255, 255, 0);
-      }
       for (int j=0; j<=500; j++) {
         float X=random(200, 800);
         float Y=random(25, 625);
+        if ((height/2-Y)*(height/2-Y)+(width/2-X)*(width/2-X)<=90000) {
+          if (frameCount / 10 % 2 == 0) { // frameCount % 2 == 0 だと速すぎ
+            fill(255);
+          } else {
+            fill(255, 255, 0);
+          }
+        } else {
+          fill(255);
+        }
         noStroke();
         ellipse(X, Y, 10, 10);
       }
+      if (frameCount / 10 % 2 == 0) { // frameCount % 2 == 0 だと速すぎ
+      fill(0);
+    } else {
+      fill(255);
+    }
+      textSize(60);
+      text("press ENTER to restart", 200, height-30);
     }
     fill(0);
     textSize(60);
     text("Y o u  W i n", 300, height/2);
-     hy-=3;
+    hy-=3;
   }
 
   void action() {
@@ -683,18 +703,38 @@ void draw() {
   if (fn>0) {
     timecp();
   }
-  f[fn].d();
-  f[fn].drawc();
-  f[fn].action();
-  f[fn].ice();
-  println(x, y);
+  if (t<=0) {
+    f[fn].badend();
+  } else {
+    f[fn].d();
+    f[fn].drawc();
+    f[fn].action();
+    f[fn].ice();
+  }
+  //println(x, y);
 }
 
 
 
 void keyPressed() {
-  if (fn==0 && key=='s') {
+  if (fn==0 && key==ENTER) {
     fn++;
+  } 
+
+  if (fn==6 && key==ENTER) {
+    fn=0;
+    t=180;
+    x=1;
+    y=1;
+    stroke(0);
+  }
+
+  if (t<=0 && key==ENTER) {
+    fn=0;
+    t=180;
+    x=1;
+    y=1;
+    stroke(0);
   }
   if (keyCode==LEFT) {
     f[fn].movec(2);
